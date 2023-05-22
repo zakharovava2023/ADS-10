@@ -20,7 +20,8 @@ std::vector<char> getPerm(const Tree& tree, int n) {
     std::vector<char> result;
     for (int i = 0; i < tree.getSize(); i++) {
         int temp = fact(ptr->getSize()-1);
-        ptr = ptr->getChild(n / temp);
+        int x = n / temp;
+        ptr = ptr->getChild(x);
         result.push_back(ptr->getValue());
         n%=temp;
     }
