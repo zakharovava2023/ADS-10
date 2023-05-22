@@ -31,7 +31,6 @@ class Tree {
     }
     Tree* getChild(int n) const {
         return childs[n];
-
     }
 };
 #endif  // INCLUDE_TREE_H_
