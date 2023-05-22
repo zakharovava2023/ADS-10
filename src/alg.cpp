@@ -24,5 +24,5 @@ std::vector<char> getPerm(const Tree& tree, int n) {
         result.push_back(ptr->getValue());
         n%=temp;
     }
-    return resul;
+    return result;
 }
