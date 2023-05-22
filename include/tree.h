@@ -17,6 +17,7 @@ class Tree {
             child->add(child, tmp);
         }
     }
+    
  public:
     explicit Tree(std::vector<char> value) {
         Tree* root = new Tree('r');
@@ -28,7 +29,7 @@ class Tree {
     int getSize() const {
         return childs.size();
     }
-    Tree* getChild(int n) const {
+    Tree* getChild(int n) {
         for (int i = 0; i < childs.size(); i++) {
             if (i == n) {
                 return childs[i];
