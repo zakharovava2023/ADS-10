@@ -17,7 +17,7 @@ class Tree {
             child->add(child, tmp);
         }
     }
-    
+ 
  public:
     explicit Tree(std::vector<char> value) {
         Tree* root = new Tree('r');
@@ -33,6 +33,7 @@ class Tree {
         for (int i = 0; i < childs.size(); i++) {
             if (i == n) {
                 return childs[i];
+                break;
             }
         }
     }
