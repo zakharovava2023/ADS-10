@@ -17,7 +17,6 @@ class Tree {
             child->add(child, tmp);
         }
     }
- 
  public:
     explicit Tree(std::vector<char> value) {
         Tree* root = new Tree('r');
@@ -36,6 +35,6 @@ class Tree {
                 break;
             }
         }
-    }
+    
 };
 #endif  // INCLUDE_TREE_H_
