@@ -35,6 +35,6 @@ class Tree {
                 break;
             }
         }
-    
+    }
 };
 #endif  // INCLUDE_TREE_H_
