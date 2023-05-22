@@ -7,9 +7,9 @@ class Tree {
  private:
     char value;
     std::vector <Tree*> childs;
-    Tree(char x) : value(x) {}
+    explicit Tree(char x) : value(x) {}
     void add(Tree* root, std::vector<char> vect) {
-        for (int i = 0; i < vec.size(); i++) {
+        for (int i = 0; i < vect.size(); i++) {
             Tree* child = new Tree(vect[i]);
             childs.push_back(child);
             std::vector<char> tmp = vect;
@@ -17,8 +17,9 @@ class Tree {
             child->add(child, tmp);
         }
     }
+    
  public:
-    Tree(std::vector<char> value) {
+    explicit Tree(std::vector<char> value) {
         Tree* root = new Tree('r');
         add(root, value);
     }
@@ -29,9 +30,11 @@ class Tree {
         return childs.size();
     }
     Tree* getChild(int n) const {
-        for (int i = 0; i < childs.size(); i++)
-            if (i == n)
+        for (int i = 0; i < childs.size(); i++) {
+            if (i == n) {
                 return childs[i];
+            }
+        }
     }
 };
 #endif  // INCLUDE_TREE_H_
